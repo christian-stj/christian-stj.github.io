@@ -58,7 +58,7 @@ div.top {
 }
 
 div.head {
-  background-image: url(pizza.jpg);
+  background-image: url(resources/pizza.jpg);
   background-size: 1100px 310px;
   background-repeat: no-repeat;
   background-position: center;
