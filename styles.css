@@ -88,6 +88,14 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+
+h3 {
+  margin-top: 50px;
+  color: #442137;
+  font-size: 130%;
+  letter-spacing: 0.1em;
+}
+
 p  {
   margin: 10px;
   color: black;
