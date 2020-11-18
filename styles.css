@@ -1,5 +1,6 @@
 body {
   font-family: monaco, Courier;
+  background-image: url('resources/trees.jpg');
   background-color: #F7F7F7;
   color: #442137;
   position: relative;
@@ -8,8 +9,10 @@ body {
 }
 
 .content {
-  max-width: 600px;
+  max-width: 630px;
+  background-color: #F7F7F7;
   margin: auto;
+  padding: 10px;
 }
 
 .projects {
