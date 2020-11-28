@@ -43,7 +43,7 @@ article {
 
 aside {
 	display: block;
-  overflow: auto;
+  overflow: hidden;
   max-width: 200px;
   margin: 10px;
 	padding: 3em 5px 5px;
