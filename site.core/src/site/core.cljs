@@ -15,48 +15,40 @@
 (defn navbar []
   [:nav {:class "flex justify-between bg-black text-white block"}
    [:div {:href "" :class "p-3"} "Christian Stjernberg"]
-   [:div {:class "invisible sm:visible"}
-    [:a {:href "https://github.com/christian-stj/" :class "fa fa-github hover:scale-125 transition p-3"}]
-    [:a {:href "https://www.linkedin.com/in/christian-stj/" :class "fa fa-linkedin hover:scale-125 transition p-3"}]]])
+   [:div {:class ""}
+    [:a {:href "https://github.com/christian-stj/" :class "fa fa-github hover:scale-125 transition p-4"}]
+    [:a {:href "https://www.linkedin.com/in/christian-stj/" :class "fa fa-linkedin hover:scale-125 transition p-4"}]]])
 
 
 ; Styles
-(def header "text-left text-3xl box-decoration-clone text-black bg-white px-2")
-
+(def header "text-left text-xl md:text-3xl box-decoration-clone text-black bg-white px-2")
+(def header-big "shrink text-left text-2xl md:text-4xl box-decoration-clone text-black bg-white px-2")
 (def project "p-6 bg-neutral-900 mt-6 rounded mb-6 shadow-sm shadow-neutral-900")
+(def global "font-mono text-sm md:text-base")
 
-(defn chapter-item [title img text & [img2 text2]]
-  [:div {:class "p-6 bg-neutral-900 mt-6 rounded mb-6 shadow-lg"}
-   [:span {:class header} title]
-   img
-   [:p text] 
-   (when img2
-     img2)
-   (when text2 
-     [:p text2])])
-
+; Main app
 (defn app []
-  [:div {:class "font-mono"}
+  [:div {:class global}
    ;; Top
    [navbar]
    ;; Body
-   [:div {:class "flex md:justify-center text-white m-3"}
+   [:div {:class "flex justify-center text-white m-3"}
     ;; Main Content
-    [:div {:class "md:max-w-xl pt-6"}
+    [:div {:class "sm:max-w-xl max-w-xs pt-6"}
      [:div {:class "mb-10"}
-      [:span {:class "text-left text-4xl box-decoration-clone text-black bg-white px-2"} "About me"]
-      [:img {:class "float-right max-w-xs w-1/4 rounded-full border border-neutral-900 m-5" :src "./img/portrait.jpeg"}]
+      [:span {:class header-big} "About me"]
+      [:img {:class "float-right max-w-xs w-1/2 sm:w-1/4 rounded-full border border-neutral-900 m-5" :src "./img/portrait.jpeg"}]
       [:div {:class "px-2 my-3"}
        [:p  "Hej! I'm a Computer Science student at KTH currently doing my thesis within the field of cybersecurity.
              I'm involved with multiple different non-profit organizations and work part time as an event technician.
              This is where I keep some of my projects, check them out!"]]]
 
      ;; Projects
-     [:span {:class "text-left text-4xl box-decoration-clone text-black bg-white px-2"} "My projects"]
+     [:span {:class header-big} "My projects"]
      [:div 
      ;; This is where projects go
       [:div {:class project}
-       [:span {:class header} "christian.stjernberg.com"]
+       [:span {:class header} "/"]
        [:iframe {:class "aspect-square w-full my-3 shadow-lg" :src "https://christian.stjernberg.com" :title "Christian Stjernberg"}]
        [:p "What is this? Pageception? This is my most recent project, I rewrote and updated my old site with clojurescript. 
         I used Reagent and Tailwind for layout and styling and Leiningen and Figwheel as build/dev tools. 
