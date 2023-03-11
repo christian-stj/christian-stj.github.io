@@ -1,0 +1,147 @@
+(ns ^:figwheel-hooks site.core
+  (:require
+   [goog.dom :as gdom]
+   [reagent.core :as reagent :refer [atom]]
+   [reagent.dom :as rdom]))
+
+(println "This text is printed from src/site/core.cljs. Go ahead and edit it and see reloading in action. ")
+
+;; define your app data so that it doesn't get over-written on reload
+(defonce app-state (atom {:text "Hello world!"}))
+
+(defn get-app-element []
+  (gdom/getElement "app"))
+
+(defn navbar []
+  [:nav {:class "flex justify-between bg-black text-white block"}
+   [:div {:href "" :class "p-3"} "Christian Stjernberg"]
+   [:div {:class "invisible sm:visible"}
+    [:a {:href "https://github.com/christian-stj/" :class "fa fa-github hover:scale-125 transition p-3"}]
+    [:a {:href "https://www.linkedin.com/in/christian-stj/" :class "fa fa-linkedin hover:scale-125 transition p-3"}]]])
+
+
+; Styles
+(def header "text-left text-3xl box-decoration-clone text-black bg-white px-2")
+
+(def project "p-6 bg-neutral-900 mt-6 rounded mb-6 shadow-sm shadow-neutral-900")
+
+(defn chapter-item [title img text & [img2 text2]]
+  [:div {:class "p-6 bg-neutral-900 mt-6 rounded mb-6 shadow-lg"}
+   [:span {:class header} title]
+   img
+   [:p text] 
+   (when img2
+     img2)
+   (when text2 
+     [:p text2])])
+
+(defn app []
+  [:div {:class "font-mono"}
+   ;; Top
+   [navbar]
+   ;; Body
+   [:div {:class "flex md:justify-center text-white m-3"}
+    ;; Main Content
+    [:div {:class "md:max-w-xl pt-6"}
+     [:div {:class "mb-10"}
+      [:span {:class "text-left text-4xl box-decoration-clone text-black bg-white px-2"} "About me"]
+      [:img {:class "float-right max-w-xs w-1/4 rounded-full border border-neutral-900 m-5" :src "./img/portrait.jpeg"}]
+      [:div {:class "px-2 my-3"}
+       [:p  "Hej! I'm a Computer Science student at KTH currently doing my thesis within the field of cybersecurity.
+             I'm involved with multiple different non-profit organizations and work part time as an event technician.
+             This is where I keep some of my projects, check them out!"]]]
+
+     ;; Projects
+     [:span {:class "text-left text-4xl box-decoration-clone text-black bg-white px-2"} "My projects"]
+     [:div 
+     ;; This is where projects go
+      [:div {:class project}
+       [:span {:class header} "christian.stjernberg.com"]
+       [:iframe {:class "aspect-square w-full my-3 shadow-lg" :src "https://christian.stjernberg.com" :title "Christian Stjernberg"}]
+       [:p "What is this? Pageception? This is my most recent project, I rewrote and updated my old site with clojurescript. 
+        I used Reagent and Tailwind for layout and styling and Leiningen and Figwheel as build/dev tools. 
+        The site got a complete new style and it is now also easier to expand and add to the site."]]
+      [:div {:class project}
+       [:span {:class header} "Bee Game"]
+       [:a {:href "https://github.com/christian-stj/bee-game"}
+        [:img {:class "my-3 shadow-lg" :src "./img/bee_game_screens.png"}]]
+       [:p "This game was made in one evening after a little bee had visited our ice-cream during lunch. 
+        The bee had some ice-cream stuck on it and chilled out on my hand for a few minutes while cleaning it out. 
+        In the game the bee must escape the falling stracciatella ice-cream for as long as possible. 
+        When struck, the bee is covered with ice-cream and the score is shown on top."]]
+      [:div {:class project}
+       [:span {:class header} "GitViz - a GitHub Visualization tool"]
+       [:a {:href "https://github.com/christian-stj/Visualizing-GitHub"}
+        [:img {:class "my-3 shadow-lg" :src "./img/gitviz1.png" :alt "GitHub Visualization - Small repo"}]]
+       [:p "For our bachelor thesis we developed a visualization tool that visualizes some GitHub data and metadata.
+        The graph in the middle shows all repo files and directories as nodes with color and size varying depending on the
+        distance from the root. The visualization can be dragged and scrolled and the nodes can also be dragged around.
+        To the left there are two menus, one where you can go to different commits and see the file tree at that point in time and
+        one where you can see different issues."]
+        [:a {:href "https://github.com/christian-stj/Visualizing-GitHub"}
+         [:img {:class "my-3 shadow-lg" :src "./img/gitviz2.png" :alt "GitHub Visualization - BIG repo"}]]
+         [:p "On encouragement from our supervisor we added dark mode because these are a must in modern websites.
+        As you can see on the image above the tool did not handle huge repositories well."]]
+      [:div {:class project}
+       [:span {:class header} "Todo List App"]
+       [:img {:class "my-3 shadow-lg" :src "./img/todo-list.png"}]
+       [:p "Full-stack project for an internet programming course, developed together with " 
+        [:a {:class "text-gray-400" :href "https://github.com/mansand1" :target "_blank"} "@mansand1"]
+        " The application was developed with Vue front-end using node backend featuring a nice ORM SQLite database.
+        Users could log in and their passwords were salted and hashed and stored in the database together
+        with their list information. The site also had a self-signed TLS certificate and was hosted on the
+        local machine. "]]
+      [:div {:class project}
+       [:span {:class header} "Tiny Guitar Hero"]
+       [:img {:class "my-3 shadow-lg" :src "./img/guitar-hero-game.jpg"}]
+       [:p "For a project in embedded programming, me and "
+        [:a {:class "text-gray-400" :href "https://github.com/theoahfeldt" :target "_blank"} "@theoahfeldt"]
+        " developed a Guitar Hero replica. The program was developed for a PIC32 microcontroller using an IO shield and some external buttons
+connected to hardware pins on the chip.
+As you can see on the tiny screen in the image above the player is presented with some dots running
+down the screen where the player must
+press the right combination of buttons and the strum button att the right time to score.
+On the screen above, the player seems to have been a bit early in strumming as is displayed on the screen."]
+       [:img {:class "my-3 shadow-lg" :src "./img/guitar.jpg"}]
+       [:p "The entire thing was packed in a flaming hot red case and gathered much interest in the project conference where
+students got to try out each other's projects. The tiny screen was placed inside the little rectangular slot at the side
+of the guitar neck and a speaker was connected to it playing som terribly offbeat square waves.
+Of course, no one could beat my high-score in the game."]]
+      [:div {:class project}
+       [:span {:class header} "Crappy Chess"]
+       [:a {:href "https://github.com/christian-stj/crappy-chess"}
+        [:img {:class "my-3 shadow-lg" :src "./img/chess.png"}]]
+       [:p "Our first \"major\" (3 weeks) project in school at the end of first year. A chess game developed with GoLang using game library Ebiten.
+The players took turns to move
+their pieces to any legal square and the game ended with the capture of the opposing king. The rules castling, en passant and
+pawn promotion as well as check and checkmate were not implemented in the game, hence the \"crappyness\"."]]]]
+    
+    ;; Sidebar
+        ;; [:div {:class "hidden text-xs md:flex sticky top-20 self-start ml-10"}
+        ;;  [:p "Check out my photography blog at " [:a {:href "https://www.instagram.com/christians_fotografi/"} "@christians_fotografi"]]]
+        ]
+
+
+   ;; Footer 
+   ;[:footer {:class ""}]
+   ])
+
+
+(defn mount [el]
+  (rdom/render [app] el))
+
+(defn mount-app-element []
+  (when-let [el (get-app-element)]
+    (mount el)))
+
+;; conditionally start your application based on the presence of an "app" element
+;; this is particularly helpful for testing this ns without launching the app
+(mount-app-element)
+
+;; specify reload hook with ^:after-load metadata
+(defn ^:after-load on-reload []
+  (mount-app-element)
+  ;; optionally touch your app-state to force rerendering depending on
+  ;; your application
+  ;; (swap! app-state update-in [:__figwheel_counter] inc)
+  )
