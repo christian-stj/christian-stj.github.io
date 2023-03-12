@@ -42,7 +42,7 @@
       [:img {:class "float-right w-1/2 md:w-1/3 xl:w-1/4 rounded-full border border-neutral-900 m-5" :src "./img/portrait.jpeg"}]
       [:div {:class "px-2 my-3"}
        [:p  "Hej! I'm a Computer Science student at KTH currently doing my thesis within the field of cybersecurity.
-             I'm involved with multiple different non-profit organizations and work part time as an event technician.
+             My interests include photography, music and technology. I'm involved with multiple different non-profit organizations and work part time as an event technician.
              This is where I keep some of my projects, check them out!"]]]
 
      ;; Projects
@@ -58,21 +58,22 @@
       [:div {:class project}
        [:span {:class header} "cljs-snake"]
        [:a {:href "http://christian.stjernberg.com/cljs-snake/" :target "_blank"}
-        [:img {:class img :src "./img/snake.png"}]] 
-       [:p "A simple snake game project I made to test out reagent and web programming with clojurescript."]]
+        [:img {:class img :src "./img/snake.png"}]]
+       [:p "A simple snake game project I made to test out reagent and web programming with clojurescript.
+            The snake is controlled using arrow keys and the playing grid wraps around the top and sides."]]
       [:div {:class project}
        [:span {:class header} "Bee Game"]
        [:a {:href "https://github.com/christian-stj/bee-game" :target "_blank"}
         [:img {:class img :src "./img/bee_game_screens.png"}]]
-       [:p "This game was made in one evening after a little bee had visited our ice-cream during lunch. 
-        The bee had some ice-cream stuck on it and chilled out on my hand for a few minutes while cleaning it out. 
-        In the game the bee must escape the falling stracciatella ice-cream for as long as possible. 
-        When struck, the bee is covered with ice-cream and the score is shown on top."]]
+       [:p "This game was made in one evening after a little bee had visited our ice-cream during lunch.
+        The bee had some ice-cream stuck on it and chilled out on my hand for a few minutes while cleaning it out.
+        In the game the bee must escape the falling stracciatella ice-cream for as long as possible.
+        When struck, the bee is covered with ice-cream and the final score is shown on top."]]
       [:div {:class project}
        [:span {:class header} "GitViz - a GitHub Visualization tool"]
        [:a {:href "https://github.com/christian-stj/Visualizing-GitHub" :target "_blank"}
         [:img {:class img :src "./img/gitviz1.png" :alt "GitHub Visualization - Small repo"}]]
-       [:p "For our bachelor thesis we developed a visualization tool that visualizes some GitHub data and metadata.
+       [:p "For our bachelor thesis we developed a visualization tool that visualizes GitHub data.
         The graph in the middle shows all repo files and directories as nodes with color and size varying depending on the
         distance from the root. The visualization can be dragged and scrolled and the nodes can also be dragged around.
         To the left there are two menus, one where you can go to different commits and see the file tree at that point in time and
