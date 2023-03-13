@@ -17,12 +17,13 @@
 (def img "my-3 shadow-lg rounded-sm")
 (def social "fa hover:scale-125 transition p-4 visited:text-neutral-400")
 (def global "font-mono text-sm md:text-base scroll-auto")
+(def audio-text "text-neutral-400 mb-1 text-xs md:text-sm")
 
 ; Navbar
 (defn navbar []
   [:nav {:class "flex justify-between bg-black text-white block"}
    [:div {:href "" :class "p-3"} "Christian Stjernberg"]
-   [:div {:class "hidden sm:flex"} 
+   [:div {:class "hidden sm:flex"}
     [:a {:href "https://www.instagram.com/christians_fotografi/" :target "_blank" :class ["fa-instagram" social]}]
     [:a {:href "https://github.com/christian-stj/" :target "_blank" :class ["fa-github" social]}]
     [:a {:href "https://www.linkedin.com/in/christian-stj/" :target "_blank" :class ["fa-linkedin" social]}]]])
@@ -55,6 +56,30 @@
        [:p "What is this? Pageception? This is my most recent project, I rewrote and updated my old site with clojurescript. 
         I used Reagent and Tailwind for layout and styling and Leiningen and Figwheel as build/dev tools. 
         The site got a complete new style and it is now also easier to expand and add to the site."]]
+      [:div {:class project}
+       [:span {:class header} "Alert sound"]
+       [:div {:class "my-3 space-y-3"}
+        [:div
+         [:p {:class audio-text} "\"Slideoff\""]
+         [:audio {:controls "true"}
+          [:source {:src "./audio/CS_sound1_slideoff.mp3"}]]]
+        [:div
+         [:p {:class audio-text} "\"Slideoff\" - in context"]
+         [:audio {:controls "true"}
+          [:source {:src "./audio/CS_sound1_with_background.mp3"}]]]
+        [:div
+         [:p {:class audio-text} "\"Fifth\""]
+         [:audio {:controls "true"}
+          [:source {:src "./audio/CS_sound2_fifth.mp3"}]]]
+        [:div
+         [:p {:class audio-text} "\"Fifth\" - in context"]
+         [:audio {:controls "true"}
+          [:source {:src "./audio/CS_sound2_with_background.mp3"}]]]]
+       [:p "In a course in musical communication, we were tasked with designing an alert sound for a retail store environment.
+            The sound was supposed to blend in well with the background audio (which was given to us) but also to be noticeable by staff.
+            This kind of sound could be used to alert staff without being too intrusive. 
+            For example, the sound could be played when someone reached onto a shelf of valuable items.
+            I designed the sounds by recording my guitar and using audio effects to make it blend well."]]
       [:div {:class project}
        [:span {:class header} "cljs-snake"]
        [:a {:href "http://christian.stjernberg.com/cljs-snake/" :target "_blank"}
@@ -117,7 +142,7 @@
         pawn promotion as well as check and checkmate were not implemented in the game, hence the \"crappyness\"."]]]]
 
     ;; Sidebar
-    [:div {:class "hidden md:flex basis-1/4 self-start justify-center"} 
+    [:div {:class "hidden md:flex basis-1/4 self-start justify-center"}
     ;;  [:div {:class "mt-20 w-24 bg-neutral-900 rounded p-2 space-y-7"}
     ;;   [:div ]
      ]]
