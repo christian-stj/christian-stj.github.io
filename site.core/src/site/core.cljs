@@ -13,7 +13,7 @@
 ; Styles
 (def header "text-left text-xl md:text-3xl box-decoration-clone text-black bg-white px-2")
 (def header-big "shrink text-left text-2xl md:text-4xl box-decoration-clone text-black bg-white px-2")
-(def project "p-6 bg-neutral-900 mt-6 rounded mb-6 shadow-sm shadow-neutral-900")
+(def project "p-6 bg-neutral-900 hover:bg-neutral-800 transition mt-6 rounded mb-6 shadow-sm shadow-neutral-900")
 (def img "my-3 shadow-lg rounded-sm")
 (def social "fa hover:scale-125 transition p-4 visited:text-neutral-400")
 (def global "font-mono text-sm md:text-base scroll-auto")
@@ -40,7 +40,7 @@
     [:div {:class "md:basis-2/4 center max-w-xs md:max-w-none pt-6"}
      [:div {:class "mb-10"}
       [:span {:class header-big} "About me"]
-      [:img {:class "float-right w-1/2 md:w-1/3 xl:w-1/4 rounded-full border border-neutral-900 m-5" :src "./img/portrait.jpeg"}]
+      [:img {:class "float-right hover:scale-110 transition duration-700 w-1/2 md:w-1/3 xl:w-1/4 rounded-full border border-neutral-900 m-5" :src "./img/portrait.jpeg"}]
       [:div {:class "px-2 my-3"}
        [:p  "Hej! I'm a Computer Science student at KTH currently doing my thesis within the field of cybersecurity.
              My interests include photography, music and technology. I'm involved with multiple different non-profit organizations and work part time as an event technician.
