@@ -48,7 +48,7 @@
    [:div {:class "px-2 my-3"}
     [:p  "Hej! 👋" [:br]
      "Welcome to my personal page!
-      My name is Christian and you may find me developing software, talking about leadership, teams and culture and a myriad of other things.
+      My name is Christian and you may find me developing software, talking about leadership, teams, and culture and a myriad of other things.
       My interests include music, photography and technology.
       I'm also very active with multiple different non-profit organizations, mainly working with youth.
       This is where I keep some of my technical projects and photography, check them out!"]]])
@@ -90,7 +90,7 @@
        [:p {:class audio-text} "\"Fifth\" - in context"]
        [:audio {:controls "true"}
         [:source {:src "./audio/CS_sound2_with_background.mp3"}]]]]
-     [:p "In a course in musical communication, we were tasked with designing an alert sound for a retail store environment.
+     [:p "For a musical communication course, we were tasked with designing an alert sound for a retail store environment.
               The sound was supposed to blend in well with the background audio (which was given to us) but also to be noticeable by staff.
               This kind of sound could be used to alert staff without being too intrusive.
               For example, the sound could be played when someone reached onto a shelf of valuable items.
@@ -108,12 +108,13 @@
      [:p "This game was made in one evening after a little bee had visited our ice-cream during lunch.
           The bee had some ice-cream stuck on it and chilled out on my hand for a few minutes while cleaning it out.
           In the game the bee must escape the falling stracciatella ice-cream for as long as possible.
-          When struck, the bee is covered with ice-cream and the final score is shown on top."]]
+          When struck, the bee is covered with ice-cream and the final score is shown on top.
+          I developed the game using Python and the Pygame library. I also created the fantastic artwork myself."]]
     [:div {:class project}
      [:span {:class header} "GitViz - a GitHub Visualization tool"]
      [:a {:href "https://github.com/christian-stj/Visualizing-GitHub" :target "_blank"}
       [:img {:class img :src "./img/gitviz1.png" :alt "GitHub Visualization - Small repo"}]]
-     [:p "For our bachelor thesis we developed a visualization tool that visualizes GitHub data.
+     [:p "For my bachelor thesis, I developed a visualization tool that visualizes GitHub data together with my thesis partner.
           The graph in the middle shows all repo files and directories as nodes with color and size varying depending on the
           distance from the root. The visualization can be dragged and scrolled and the nodes can also be dragged around.
           To the left there are two menus, one where you can go to different commits and see the file tree at that point in time and
@@ -125,7 +126,7 @@
     [:div {:class project}
      [:span {:class header} "Todo List App"]
      [:img {:class img :src "./img/todo-list.png"}]
-     [:p "Full-stack project for an internet programming course, developed together with "
+     [:p "This was a full-stack project for a web programming course. I developed the app together with "
       [:a {:class "text-gray-400" :href "https://github.com/mansand1" :target "_blank"} "@mansand1"]
       " The application was developed with Vue front-end using node backend featuring a nice ORM SQLite database.
           Users could log in and their passwords were salted and hashed and stored in the database together
@@ -143,15 +144,15 @@
           press the right combination of buttons and the strum button att the right time to score.
           On the screen above, the player seems to have been a bit early in strumming as is displayed on the screen."]
      [:img {:class img :src "./img/guitar.jpg"}]
-     [:p "The entire thing was packed in a flaming hot red case and gathered much interest in the project conference where
+     [:p "The entire thing was packed in a flaming hot red case and gathered much interest at the project conference where
           students got to try out each other's projects. The tiny screen was placed inside the little rectangular slot at the side
-          of the guitar neck and a speaker was connected to it playing som terribly offbeat square waves.
+          of the guitar neck and then a speaker was connected to the microcontroller playing som terribly off-beat square waves.
           Of course, no one could beat my high-score in the game."]]
     [:div {:class project}
      [:span {:class header} "Crappy Chess"]
      [:a {:href "https://github.com/christian-stj/crappy-chess" :target "_blank"}
       [:img {:class img :src "./img/chess.png"}]]
-     [:p "Our first \"major\" (3 weeks) project in school at the end of first year. A chess game developed with GoLang using game library Ebiten.
+     [:p "For our first \"major\" (3 weeks) project in school at the end of first year (back in 2018). A chess game developed with GoLang using game library Ebiten.
           The players took turns to move
           their pieces to any legal square and the game ended with the capture of the opposing king. The rules castling, en passant and
           pawn promotion as well as check and checkmate were not implemented in the game, hence the \"crappyness\"."]]]])
