@@ -8,19 +8,18 @@
   (gdom/getElement "app"))
 
 (def styles
-  {:header "text-left text-xl md:text-3xl box-decoration-clone text-[#ffaa00] px-2 mt-10"
-   :header-big "shrink text-left text-2xl md:text-4xl text-[#ffaa00] px-2 mb-4 mt-14"
-   :project "p-6 border-4 border-amber-100 transition mt-6 rounded mb-6 shadow-sm shadow-neutral-900"
-   :nav-button "hover:bg-lime-800 flex text-amber-100 p-3 text-center"
-   :img "my-3 shadow-lg rounded-sm place-content-center"
-   :photo "my-4 mb-8 shadow-lg rounded-sm w-11/12 border-8 border-amber-100"
-   :social "fa hover:scale-125 transition p-4"
-   :global "font-roboto text-sm md:text-base scroll-auto bg-lime-800 text-amber-100"
-   :audio-text "text-amber-100 mb-1 text-xs md:text-sm"
-   :tag "text-center text-xl md:text-3xl mb-4 mt-12"})
+  {:header "text-left text-xl md:text-3xl box-decoration-clone text-accent px-2 mt-10"
+   :header-big "shrink text-left text-2xl md:text-4xl text-accent px-2 mb-4 mt-14"
+   :project "p-6 border-2 border-accent transition mt-6 rounded mb-6 shadow-lg shadow-neutral-900 bg-dark-bg-light"
+   :nav-button "hover:bg-accent-dark flex text-light-text p-3 text-center rounded transition duration-300"
+   :img "my-3 shadow-lg rounded-md place-content-center"
+   :photo "my-4 mb-8 shadow-lg rounded-md w-11/12 border-2 border-accent"
+   :social "fa hover:scale-125 transition p-4 text-accent"
+   :global "font-roboto text-sm md:text-base scroll-auto bg-dark-bg text-light-text"
+   :audio-text "text-light-text mb-1 text-xs md:text-sm"})
 
 (defn navbar []
-  [:nav {:class "flex justify-between bg-lime-900 text-amber-100 block fixed top-0 left-0 right-0"}
+  [:nav {:class "flex justify-between bg-dark-bg-light text-light-text block fixed top-0 left-0 right-0"}
    [:div {:href "" :class "flex"}
     [:a {:href "#top" :class (styles :nav-button)} "Christian Stjernberg"]
     [:a {:href "#projects" :class (styles :nav-button)} "Projects"]
@@ -29,10 +28,6 @@
     [:a {:href "https://www.instagram.com/christians_fotografi/" :target "_blank" :class ["fa-instagram" (styles :social)]}]
     [:a {:href "https://github.com/christian-stj/" :target "_blank" :class ["fa-github" (styles :social)]}]
     [:a {:href "https://www.linkedin.com/in/christian-stj/" :target "_blank" :class ["fa-linkedin" (styles :social)]}]]])
-
-(defn tagline []
-  [:div {:class (styles :tag)}
-   [:em "People, software, music"]])
 
 (defn intro []
   [:div {:class "mb-10"}
@@ -109,14 +104,13 @@
 
 (defn footer []
   [:footer {:class "w-full text-xl block text-center"}
-   [:p {:class "bg-lime-900 box-decoration-clone tracking-wide p-4"} "© Christian Stjernberg - 2024"]])
+   [:p {:class "bg-dark-bg-light box-decoration-clone tracking-wide p-4"} "© Christian Stjernberg - 2024"]])
 
 (defn app []
   [:div {:class (styles :global)}
    [navbar]
    [:div {:class "flex flex-row justify-center m-3"}
     [:div {:class "md:basis-2/4 center max-w-xs md:max-w-none pt-6"}
-     [tagline]
      [intro]
      [projects]
      [photography]]]
