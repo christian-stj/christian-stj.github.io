@@ -1,4 +1,4 @@
-baseURL = 'https://christian.stjernberg.com'
+baseURL = 'https://christian.stjernberg.com/'
 languageCode = 'en-us'
 title = 'Christian'
 theme = 'not-much'
@@ -18,11 +18,6 @@ theme = "dark"
 palette = "catpuccin"
 showPostsSummary = true
 
-# Add this section to configure projects like posts
-#[permalinks]
-#  posts = "/posts/:year/:month/:title/"
-#  projects = "/projects/:year/:month/:title/"
-
 # Navigation
 [menu]
   [[menu.main]]
@@ -35,13 +30,13 @@ showPostsSummary = true
     identifier = "about"
     name = "about"
     title = "About"
-    url = "/about/"
+    url = "/about"
     weight = 2
   [[menu.main]]
     identifier = "projects"
     name = "projects"
     title = "Projects"
-    url = "/projects/"
+    url = "/projects"
     weight = 3
   [[menu.main]]
     identifier = "posts"
