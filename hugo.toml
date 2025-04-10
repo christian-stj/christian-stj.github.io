@@ -1,0 +1,51 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Christian'
+theme = 'not-much'
+
+copyright = "Christian Stjernberg © {year}"
+
+[markup]
+  [markup.highlight]
+    style = 'dracula'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+[params]
+theme = "dark"
+palette = "catpuccin"
+showPostsSummary = true
+
+# Add this section to configure projects like posts
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
+  projects = "/projects/:year/:month/:title/"
+
+# Navigation
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "home"
+    title = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    title = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    identifier = "projects"
+    name = "projects"
+    title = "Projects"
+    url = "/projects/"
+    weight = 3
+  [[menu.main]]
+    identifier = "posts"
+    name = "posts"
+    title = "Posts"
+    url = "/posts"
+    weight = 4

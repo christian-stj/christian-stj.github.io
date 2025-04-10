@@ -1,4 +1,0 @@
-# Don't include generated CSS and stuff in language metadata
-site.core/resources/public/cljs-out/** linguist-generated=true
-site.core/resources/public/css/** linguist-generated=true
-

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Christian-stj</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Christian-stj</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Christian Stjernberg © {year}</copyright>
+    <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alert sound</title>
+      <link>http://localhost:1313/projects/2023/04/alert-sound/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/2023/04/alert-sound/</guid>
+      <description>Audio engineering.</description>
+    </item>
+    <item>
+      <title>Bee Game</title>
+      <link>http://localhost:1313/projects/2022/04/bee-game/</link>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/2022/04/bee-game/</guid>
+      <description>Help the bee dodge falling stracciatella ice-cream.</description>
+    </item>
+    <item>
+      <title>cljs-snake</title>
+      <link>http://localhost:1313/projects/2021/12/cljs-snake/</link>
+      <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/2021/12/cljs-snake/</guid>
+      <description>A straightforward snake game controlled with arrow keys.</description>
+    </item>
+    <item>
+      <title>GitViz - a GitHub Visualization tool</title>
+      <link>http://localhost:1313/projects/2020/06/gitviz-a-github-visualization-tool/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/2020/06/gitviz-a-github-visualization-tool/</guid>
+      <description>An interactive tool to visualize GitHub repositories.</description>
+    </item>
+    <item>
+      <title>Todo List App</title>
+      <link>http://localhost:1313/projects/2019/03/todo-list-app/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/2019/03/todo-list-app/</guid>
+      <description>A full-stack application for managing tasks.</description>
+    </item>
+    <item>
+      <title>Tiny Guitar Hero</title>
+      <link>http://localhost:1313/projects/2018/12/tiny-guitar-hero/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/2018/12/tiny-guitar-hero/</guid>
+      <description>A replica of Guitar Hero created using a PIC32 microcontroller.</description>
+    </item>
+    <item>
+      <title>Crappy Chess</title>
+      <link>http://localhost:1313/projects/2017/06/crappy-chess/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/2017/06/crappy-chess/</guid>
+      <description>A simple chess game developed as a school project.</description>
+    </item>
+  </channel>
+</rss>
