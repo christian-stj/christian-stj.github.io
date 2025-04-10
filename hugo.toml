@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://christian.stjernberg.com'
 languageCode = 'en-us'
 title = 'Christian'
 theme = 'not-much'
@@ -19,9 +19,9 @@ palette = "catpuccin"
 showPostsSummary = true
 
 # Add this section to configure projects like posts
-[permalinks]
-  posts = "/posts/:year/:month/:title/"
-  projects = "/projects/:year/:month/:title/"
+#[permalinks]
+#  posts = "/posts/:year/:month/:title/"
+#  projects = "/projects/:year/:month/:title/"
 
 # Navigation
 [menu]
