@@ -14,4 +14,4 @@ In this project, I developed a straightforward snake game to experiment with Rea
 [Play the game here](http://christian.stjernberg.com/cljs-snake/)
 
 ## Screenshot
-![cljs-snake game screenshot](/img/snake.png)
+![cljs-snake game screenshot](/img/snake.jpg)

@@ -2,7 +2,7 @@
 lead: "Software engineering, music, photography, and whatnot"
 ---
 
-<img style="border-radius: 4%;" src="img/christian-b&w.png" alt="Portrait of Christian">
+<img style="border-radius: 4%;" src="img/christian-b&w.jpg" alt="Portrait of Christian">
 
 Welcome to my page. I'm Christian, a software engineer with a passion for
 leadership, team dynamics, and culture. When I'm not working, you'll find me exploring

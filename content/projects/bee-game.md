@@ -14,4 +14,4 @@ Inspired by a bee that visited our ice-cream during lunch, I created this game i
 [View the project on GitHub](https://github.com/christian-stj/bee-game)
 
 ## Screenshot
-![Bee Game screenshot](/img/bee_game_screens.png)
+![Bee Game screenshot](/img/bee_game_screens.jpg)

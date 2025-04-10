@@ -14,4 +14,4 @@ For our first "major" (3 weeks) project in school at the end of first year (back
 [View the project on GitHub](https://github.com/christian-stj/crappy-chess)
 
 ## Screenshot
-![Chess Game Screenshot](/img/chess.png)
+![Chess Game Screenshot](/img/chess.jpg)

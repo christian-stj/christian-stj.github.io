@@ -14,6 +14,6 @@ For my bachelor thesis, my partner and I developed GitViz, a tool to visualize G
 [View the project on GitHub](https://github.com/christian-stj/Visualizing-GitHub)
 
 ## Screenshots
-![GitHub Visualization - Small repo](/img/gitviz1.png)
+![GitHub Visualization - Small repo](/img/gitviz1.jpg)
 
-![GitHub Visualization - BIG repo](/img/gitviz2.png)
+![GitHub Visualization - BIG repo](/img/gitviz2.jpg)

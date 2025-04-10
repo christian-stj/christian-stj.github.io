@@ -14,4 +14,4 @@ This full-stack project was developed for a web programming course. We used Vue 
 [View the project on GitHub](https://github.com/christian-stj/todo-list)
 
 ## Screenshots
-![Todo List App Screenshot](/img/todo-list.png)
+![Todo List App Screenshot](/img/todo-list.jpg)
