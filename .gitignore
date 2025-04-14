@@ -1,5 +1,6 @@
 .DS_Store
 
+/public
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,intellij,clojure
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,intellij,clojure

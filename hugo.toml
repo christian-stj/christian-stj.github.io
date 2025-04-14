@@ -39,6 +39,12 @@ showPostsSummary = true
     url = "/projects"
     weight = 3
   [[menu.main]]
+    identifier = "photos"
+    name = "photos"
+    title = "Photos"
+    url = "/photos"
+    weight = 4
+  [[menu.main]]
     identifier = "posts"
     name = "posts"
     title = "Posts"
